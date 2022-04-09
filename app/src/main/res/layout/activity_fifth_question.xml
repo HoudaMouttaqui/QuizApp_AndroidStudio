@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fifth_question"
+    android:layout_margin="0dp"
+    android:padding="30dp"
+    android:background="@drawable/questionsbg">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="278dp"
+        android:src="@drawable/ross"
+        />
+    <TextView
+        android:id="@+id/tvQ5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="How many times did Ross Geller get divorced on Friends?"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:padding="10dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <RadioButton
+            android:id="@+id/rNever"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_answer"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="Never"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/rFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_answer"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="5 times"
+            android:textColor="@color/white"
+
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/rThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_answer"
+            android:buttonTint="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:text="3 times"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:padding="5dp"
+        android:layout_gravity="right"
+        android:text="Next"
+        android:textColor="#000000"
+        android:background="@drawable/custom_input"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

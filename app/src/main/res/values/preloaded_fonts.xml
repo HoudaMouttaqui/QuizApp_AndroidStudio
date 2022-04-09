@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/amarante</item>
+        <item>@font/averia_libre_light</item>
+        <item>@font/averia_serif_libre_light</item>
+        <item>@font/convergence</item>
+        <item>@font/gelasio</item>
+        <item>@font/rosarivo</item>
+        <item>@font/unna</item>
+    </array>
+</resources>
