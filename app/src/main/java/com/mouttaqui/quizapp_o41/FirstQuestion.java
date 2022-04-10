@@ -3,6 +3,8 @@ package com.mouttaqui.quizapp_o41;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class FirstQuestion extends AppCompatActivity {
     //Declaration
@@ -11,6 +13,6 @@ public class FirstQuestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_question);
+
     }
 }

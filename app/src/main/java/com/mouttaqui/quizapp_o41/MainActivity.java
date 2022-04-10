@@ -80,19 +80,19 @@ TextView tvRegister;
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(),
-                            "Login successful!!",
+                            "Welcome!",
                             Toast.LENGTH_LONG)
                             .show();
                     // hide the progress bar
                     //progressbar.setVisibility(View.GONE);
                     Intent intent
                             = new Intent(MainActivity.this,
-                            FirstQuestion.class);
+                            Quiz_topic.class);
                     startActivity(intent);
                 }
                 else{
                     Toast.makeText(getApplicationContext(),
-                            "Login failed!!",
+                            "Login failed! Please try again!",
                             Toast.LENGTH_LONG)
                             .show();
                     // hide the progress bar

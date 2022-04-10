@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,6 +11,7 @@
     android:background="@drawable/bgregister">
 
     <ImageView
+        android:id="@+id/quizid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logoreg"
@@ -26,6 +27,7 @@
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:background="@drawable/custom_input"
+        android:layout_below="@+id/quizid"
         android:hint="Name" />
     <EditText
         android:layout_width="match_parent"
@@ -37,6 +39,7 @@
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:background="@drawable/custom_input"
+        android:layout_below="@+id/etName"
         android:hint="Mail" />
     <EditText
         android:layout_width="match_parent"
@@ -50,6 +53,7 @@
         android:paddingEnd="12dp"
         android:background="@drawable/custom_input"
         android:hint="Password"
+        android:layout_below="@+id/etLogin"
         android:inputType="textPassword"/>
     <EditText
         android:layout_width="match_parent"
@@ -63,6 +67,7 @@
         android:paddingEnd="12dp"
         android:background="@drawable/custom_input"
         android:hint="Confirm Password"
+        android:layout_below="@+id/etPassword"
         android:inputType="textPassword"/>
     <Button
         android:layout_width="match_parent"
@@ -70,6 +75,10 @@
         android:id="@+id/bSign"
         android:background="@drawable/custom_input"
         android:layout_marginTop="30dp"
+        android:layout_below="@+id/etConfirm"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="16sp"
         android:text="Sign up">
     </Button>
 
@@ -77,17 +86,18 @@
         android:id="@+id/tvSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:text="Already have an account? Click here to sign in !"
         android:textColor="#5513CA"
+        android:layout_below="@+id/bSign"
         android:textSize="16sp" />
 
-    <!-- ProgressBar for loading time
-    <ProgressBar
+  <!--  <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:visibility="gone" />-->
-</LinearLayout>
+        android:layout_below="@+id/tvSignIn"
+        android:visibility="gone" /> -->
+</RelativeLayout>

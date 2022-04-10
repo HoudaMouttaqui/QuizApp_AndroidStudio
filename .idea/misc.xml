@@ -13,11 +13,20 @@
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/ic_launcher_background.xml" value="0.172" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/ic_lock.xml" value="0.172" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/ic_person.xml" value="0.172" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/round_back_green10.xml" value="0.1295" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/round_back_questions10.xml" value="0.1295" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/round_back_red10.xml" value="0.1295" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/round_back_white10.xml" value="0.1295" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/round_back_white_stroke10.xml" value="0.1295" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/drawable/round_back_white_stroke2.xml" value="0.1295" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/font/.xml" value="0.234375" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_fifth_question.xml" value="0.25" />
-        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_first_question.xml" value="0.25" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_first_question.xml" value="0.33" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_fourth_question.xml" value="0.25" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_quiz.xml" value="0.25" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_quiz_results.xml" value="0.25" />
+        <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_quiz_topic.xml" value="0.22" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_second_question.xml" value="0.25" />
         <entry key="..\:/Users/Abdellah-PC/AndroidStudioProjects/QuizApp_o41/app/src/main/res/layout/activity_third_question.xml" value="0.25" />
