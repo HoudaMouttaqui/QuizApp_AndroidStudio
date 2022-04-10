@@ -19,21 +19,6 @@
             android:name=".Quiz_topic"
             android:exported="false" />
         <activity
-            android:name=".fifth_question"
-            android:exported="false" />
-        <activity
-            android:name=".fourth_question"
-            android:exported="false" />
-        <activity
-            android:name=".third_question"
-            android:exported="false" />
-        <activity
-            android:name=".second_question"
-            android:exported="false" />
-        <activity
-            android:name=".FirstQuestion"
-            android:exported="false" />
-        <activity
             android:name=".Register"
             android:exported="false" />
         <activity

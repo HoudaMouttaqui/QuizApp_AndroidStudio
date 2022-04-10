@@ -31,7 +31,6 @@ private String selectedOptionByUser = "";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        setContentView(R.layout.activity_first_question);
         final String getSelectedTopicName = getIntent().getStringExtra("selectedTopic");
         final TextView timer = findViewById(R.id.tvTimer);
         final ImageView backBtn = findViewById(R.id.Btnback);
