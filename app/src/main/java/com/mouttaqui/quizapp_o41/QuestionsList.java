@@ -11,7 +11,7 @@ private String userSelectedAnswer;
         this.option2 = option2;
         this.option3 = option3;
         this.answer = answer;
-        this.userSelectedAnswer = userSelectedAnswer;
+       this.userSelectedAnswer = userSelectedAnswer;
     }
 
     public String getQuestion() {
@@ -34,7 +34,7 @@ private String userSelectedAnswer;
         return answer;
     }
 
-    public String getUserSelectedAnswer() {
+  public String getUserSelectedAnswer() {
         return userSelectedAnswer;
     }
 
@@ -58,7 +58,7 @@ private String userSelectedAnswer;
         this.answer = answer;
     }
 
-    public void setUserSelectedAnswer(String userSelectedAnswer) {
+  public void setUserSelectedAnswer(String userSelectedAnswer) {
         this.userSelectedAnswer = userSelectedAnswer;
     }
 }

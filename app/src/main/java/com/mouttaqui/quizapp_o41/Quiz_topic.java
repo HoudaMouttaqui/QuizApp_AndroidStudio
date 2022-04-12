@@ -3,7 +3,9 @@ package com.mouttaqui.quizapp_o41;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -23,6 +25,15 @@ public class Quiz_topic extends AppCompatActivity {
         final LinearLayout pop = findViewById(R.id.PopLayout);
 
         final Button startBtn = findViewById(R.id.BstartQuiz);
+        //final Button Bmaps = findViewById(R.id.Bmaps);
+
+
+      /* Bmaps.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(Quiz_topic.this,MapsActivity.class);
+           }
+       });*/
 
         science.setOnClickListener(new View.OnClickListener() {
             @Override

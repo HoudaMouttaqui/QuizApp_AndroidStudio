@@ -1,8 +1,10 @@
 package com.mouttaqui.quizapp_o41;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +12,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,13 +32,17 @@ private AppCompatButton nextBtn;
 private Timer quizTimer;
 private int totalTimeInMins = 1;
 private int seconds = 0;
-private List<QuestionsList> questionsLists;
+
+private List<QuestionsList> questionsLists= new ArrayList<>();
+
 private int currentQuestionPostion = 0;
 private String selectedOptionByUser = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
         final String getSelectedTopicName = getIntent().getStringExtra("selectedTopic");
         final TextView timer = findViewById(R.id.tvTimer);
         final ImageView backBtn = findViewById(R.id.Btnback);
@@ -44,16 +56,55 @@ private String selectedOptionByUser = "";
 
         selectedTopicName.setText(getSelectedTopicName);
 
+/*        //get questions from firebase
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://quizzy-ca759-default-rtdb.firebaseio.com/");
+
+        //show dialog while questions are being fetched
+        ProgressDialog progressDialog = new ProgressDialog(QuizActivity.this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //getting all questions from firebase for a specific topic
+                for(DataSnapshot dataSnapshot : snapshot.child("getSelectedTopicName").getChildren()){
+
+                    final String getQuestion = dataSnapshot.child("question").getValue(String.class);
+                    final String getOption1 = dataSnapshot.child("option1").getValue(String.class);
+                    final String getOption2 = dataSnapshot.child("option2").getValue(String.class);
+                    final String getOption3 = dataSnapshot.child("option3").getValue(String.class);
+                    final String getAnswer = dataSnapshot.child("answer").getValue(String.class);
+
+
+                    //adding data to the questions list
+                    QuestionsList questionsList = new QuestionsList(getQuestion,getOption1,getOption2,getOption3,getAnswer);
+
+                    questionsLists.add(questionsList);
+                }
+                //hide dialog
+                progressDialog.hide();
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });*/
+
         questionsLists = QuestionsBank.getQuestions(getSelectedTopicName);
 
 
         startTimer(timer);
-
         questions.setText((currentQuestionPostion+1)+"/"+questionsLists.size());
         question.setText(questionsLists.get(0).getQuestion());
         option1.setText(questionsLists.get(0).getOption1());
         option2.setText(questionsLists.get(0).getOption2());
         option3.setText(questionsLists.get(0).getOption3());
+
 
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,6 +223,7 @@ private void changeNextQuestion(){
                     seconds = 59;
                 }
                 else if(seconds ==0 && totalTimeInMins==0){
+                    //used to remove all the cancelled tasks from this queue of the Timer
                     quizTimer.purge();
                     quizTimer.cancel();
                     Toast.makeText(QuizActivity.this, "Time Over!", Toast.LENGTH_SHORT).show();
@@ -224,7 +276,7 @@ private void changeNextQuestion(){
             final String getUserSelectedAnswer = questionsLists.get(i).getUserSelectedAnswer();
             final String getAnswer = questionsLists.get(i).getAnswer();
 
-            if(!getUserSelectedAnswer.equals(getAnswer)){
+           if(!getUserSelectedAnswer.equals(getAnswer)){
                 correctAnswers++;
             }
 
